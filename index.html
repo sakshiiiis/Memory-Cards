@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <h1>Memory Cards</h1>
+
+    <!-- Home Screen-->
+    <div id="homeScreen" class="screen active">
+      <div class="container">
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:27;"></span>
+        <span style="--i:28;"></span> 
+        <span style="--i:29;"></span>
+        <span style="--i:30;"></span>
+        <span style="--i:31;"></span>
+        <span style="--i:32;"></span>
+        <span style="--i:33;"></span>
+        <span style="--i:34;"></span>
+        <span style="--i:35;"></span>
+        <span style="--i:36;"></span>
+        <span style="--i:37;"></span>
+        <span style="--i:38;"></span>
+        <span style="--i:39;"></span> 
+        <span style="--i:40;"></span>
+        <span style="--i:41;"></span>
+        <span style="--i:42;"></span>
+        <span style="--i:43;"></span>
+        <span style="--i:44;"></span>
+        <span style="--i:45;"></span>
+      </div>
+      <div class="welcome-container">
+        <h2 id="welcomeMessage">Welcome <br> to <br> The Memory Card Game</h2>
+        <button id="playNowButton" onclick="startGame()">Start Game</button>
+        <button id="customizeButton" onclick="showCustomizationScreen()">Customize</button>
+      </div>
+      
+    </div>
+
+    <!-- Customization Screen -->
+    <div id="customizationScreen" class="screen" style="display: none;">
+      <h2>Customize Your Game</h2>
+      <h3>Choose Background Color:</h3>
+      <div>
+        <button class="color-option" data-color="black" style="background-color: black;">Black</button>
+        <button class="color-option" data-color="eggplant" style="background-color: #54414E;">Eggplant</button>
+        <button class="color-option" data-color="lime green" style="background-color: #C5EBC3;">Lime Green</button>
+        <button class="color-option" data-color="pink lavender" style="background-color: #fbcaef;">Pink Lavender</button>
+      </div>
+      <h3>Choose Card Background:</h3>
+      <div>
+        <button class="image-option" data-image="Background 1.jpg" style="background-image: url('Background\ 1.jpg');">Image 1</button>
+        <button class="image-option" data-image="Background 2.jpg" style="background-image: url('Background\ 2.jpg');">Image 2</button>
+        <button class="image-option" data-image="Background 3.jpg" style="background-image: url('Background\ 3.jpg');">Image 3</button>
+        <button class="image-option" data-image="Background 4.jpg" style="background-image: url('Background\ 4.jpg');">Image 4</button>
+      </div>
+      <button onclick="newStart()">Start Game</button>
+    </div>  
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen" style="display: none;">
+      <div class="grid-container"></div>
+      <p>Score: <span class="score"></span></p>
+      <div class="actions">
+        <button onclick="restart()">Restart</button>
+      </div>
+      <div class="easeOfAccess">
+        <button class="back-button" onclick="showHomeScreen()">Back</button>
+      </div>
+    </div>
+
+    
+
+    <script src="index.js"></script>
+  </body>
+</html>
